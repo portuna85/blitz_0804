@@ -17,7 +17,6 @@ public class Posts extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "posts_id")
     private Long id;
 
     @Column(length = 500, nullable = false)
