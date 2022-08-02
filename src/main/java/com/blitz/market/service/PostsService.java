@@ -23,7 +23,7 @@ public class PostsService {
     public Long save(PostsDto.Request dto, String nickname) {
         /* User 정보를 가져와 dto에 담아준다. */
         User user = userRepository.findByNickname(nickname).orElseThrow(() ->
-                new IllegalArgumentException("사용자가 존재하지 않습니다. "));;
+                new IllegalArgumentException("사용자가 존재하지 않습니다. "));
         dto.setUser(user);
         Posts posts = dto.toEntity();
         postsRepository.save(posts);

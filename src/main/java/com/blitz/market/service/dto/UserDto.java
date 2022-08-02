@@ -59,7 +59,7 @@ public class UserDto {
      * 엔티티 클래스에 직렬화를 넣어주면 추후에 다른 엔티티와 연관관계를 맺을시
      * 직렬화 대상에 다른 엔티티까지 포함될 수 있어 성능 이슈 우려가 있기 때문에
      * 세션 저장용 Dto 클래스 생성
-     * */
+     */
     @Getter
     public static class Response implements Serializable {
 
@@ -70,7 +70,9 @@ public class UserDto {
         private final Role role;
         private final String modifiedDate;
 
-        /* Entity -> dto */
+        /**
+         *  Entity -> dto
+         */
         public Response(User user) {
             this.id = user.getId();
             this.username = user.getUsername();

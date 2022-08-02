@@ -61,7 +61,9 @@ public class UserController {
               */
             model.addAttribute("userDto", dto);
 
-            /* 유효성 통과 못한 필드와 메시지를 핸들링 */
+            /**
+             * 유효성 통과 못한 필드와 메시지를 핸들링
+             */
             Map<String, String> validatorResult = userService.validateHandling(errors);
             for (String key : validatorResult.keySet()) {
                 model.addAttribute(key, validatorResult.get(key));
