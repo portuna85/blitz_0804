@@ -26,7 +26,8 @@ public class CommentService {
     /* CREATE */
     @Transactional
     public Long save(Long id, String nickname, CommentDto.Request dto) {
-        User user = userRepository.findByNickname(nickname);
+        User user = userRepository.findByNickname(nickname).orElseThrow(() ->
+                new IllegalArgumentException("댓글 쓰기 실패: 해당 게시글이 존재하지 않습니다. " + id));;
         Posts posts = postsRepository.findById(id).orElseThrow(() ->
                 new IllegalArgumentException("댓글 쓰기 실패: 해당 게시글이 존재하지 않습니다. " + id));
 

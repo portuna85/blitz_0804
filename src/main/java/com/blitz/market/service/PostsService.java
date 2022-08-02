@@ -22,7 +22,8 @@ public class PostsService {
     @Transactional
     public Long save(PostsDto.Request dto, String nickname) {
         /* User 정보를 가져와 dto에 담아준다. */
-        User user = userRepository.findByNickname(nickname);
+        User user = userRepository.findByNickname(nickname).orElseThrow(() ->
+                new IllegalArgumentException("사용자가 존재하지 않습니다. "));;
         dto.setUser(user);
         Posts posts = dto.toEntity();
         postsRepository.save(posts);
@@ -33,8 +34,7 @@ public class PostsService {
     /* READ 게시글 리스트 조회 readOnly 속성으로 조회속도 개선 */
     @Transactional(readOnly = true)
     public PostsDto.Response findById(Long id) {
-        Posts posts = postsRepository.findById(id).orElseThrow(() ->
-                new IllegalArgumentException("해당 게시글이 존재하지 않습니다. id: " + id));
+        Posts posts = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 게시글이 존재하지 않습니다. id: " + id));
 
         return new PostsDto.Response(posts);
     }
@@ -44,8 +44,7 @@ public class PostsService {
      * 트랜잭션이 끝날 때 자동으로 DB에 저장해준다. */
     @Transactional
     public void update(Long id, PostsDto.Request dto) {
-        Posts posts = postsRepository.findById(id).orElseThrow(() ->
-                new IllegalArgumentException("해당 게시글이 존재하지 않습니다. id=" + id));
+        Posts posts = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 게시글이 존재하지 않습니다. id=" + id));
 
         posts.update(dto.getTitle(), dto.getContent());
     }
@@ -53,8 +52,7 @@ public class PostsService {
     /* DELETE */
     @Transactional
     public void delete(Long id) {
-        Posts posts = postsRepository.findById(id).orElseThrow(() ->
-                new IllegalArgumentException("해당 게시글이 존재하지 않습니다. id=" + id));
+        Posts posts = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 게시글이 존재하지 않습니다. id=" + id));
 
         postsRepository.delete(posts);
     }
