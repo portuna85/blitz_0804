@@ -119,4 +119,3 @@ public class PostsIndexController {
         return "posts/posts-search";
     }
 }
-
