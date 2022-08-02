@@ -44,7 +44,7 @@ public class PostsIndexController {
         model.addAttribute("hasNext", list.hasNext());
         model.addAttribute("hasPrev", list.hasPrevious());
 
-        return "/index";
+        return "index";
     }
 
     /* 글 작성 */
@@ -53,7 +53,7 @@ public class PostsIndexController {
         if (user != null) {
             model.addAttribute("user", user);
         }
-        return "/posts/posts-write";
+        return "posts/posts-write";
     }
 
     /* 글 상세보기 */
@@ -88,7 +88,7 @@ public class PostsIndexController {
 
         postsService.updateView(id); // views ++
         model.addAttribute("posts", dto);
-        return "/posts/posts-read";
+        return "posts/posts-read";
     }
 
     @GetMapping("/posts/update/{id}")
@@ -99,7 +99,7 @@ public class PostsIndexController {
         }
         model.addAttribute("posts", dto);
 
-        return "/posts/posts-update";
+        return "posts/posts-update";
     }
 
     @GetMapping("/posts/search")
@@ -116,7 +116,7 @@ public class PostsIndexController {
         model.addAttribute("hasNext", searchList.hasNext());
         model.addAttribute("hasPrev", searchList.hasPrevious());
 
-        return "/posts/posts-search";
+        return "posts/posts-search";
     }
 }
 
