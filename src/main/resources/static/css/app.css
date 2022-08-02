@@ -1,5 +1,5 @@
 html, body {
-    height: 150%;
+    height: 120%;
     padding: 0;
     margin: 0;
 }
@@ -8,8 +8,8 @@ input:invalid {
     border-color: red;
 }
 #header {
-    background: #7ba190;
-    color: #ffffff;
+    background: #26e50d;
+    color: #c2983d;
     padding: 20px;
     font-size: 3em;
 }
