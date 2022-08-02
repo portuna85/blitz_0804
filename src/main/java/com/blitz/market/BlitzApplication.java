@@ -19,3 +19,4 @@ public class BlitzApplication extends SpringBootServletInitializer {
         SpringApplication.run(BlitzApplication.class, args);
     }
 }
+
