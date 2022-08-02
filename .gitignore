@@ -5,7 +5,6 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 /test/
-note/
 
 ### STS ###
 .apt_generated
@@ -27,6 +26,7 @@ bin/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+note/
 
 ### NetBeans ###
 /nbproject/private/
