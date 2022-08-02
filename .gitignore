@@ -5,7 +5,7 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 /test/
-application.properties
+application-oauth.properties
 application-real-db.properties
 
 ### STS ###
