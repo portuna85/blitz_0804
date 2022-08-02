@@ -16,6 +16,7 @@ public class CustomValidators {
     @RequiredArgsConstructor
     @Component
     public static class EmailValidator extends AbstractValidator<UserDto.Request> {
+
         private final UserRepository userRepository;
 
         @Override
