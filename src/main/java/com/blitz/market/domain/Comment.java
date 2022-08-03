@@ -16,9 +16,9 @@ import javax.persistence.*;
 @Table(name = "comments")
 @Entity
 public class Comment {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "comment_id")
     private Long id;
 
     @Column(columnDefinition = "TEXT", nullable = false)
@@ -38,9 +38,9 @@ public class Comment {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private User user;
+    private User user; // 작성자
 
-    /** 댓글 수정 */
+    /* 댓글 수정 */
     public void update(String comment) {
         this.comment = comment;
     }

@@ -16,7 +16,6 @@ public class User extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
     private Long id;
 
     @Column(nullable = false, length = 30, unique = true)
@@ -35,23 +34,19 @@ public class User extends BaseTimeEntity {
     @Column(nullable = false)
     private Role role;
 
+    /* 회원정보 수정 */
     public void modify(String nickname, String password) {
         this.nickname = nickname;
         this.password = password;
     }
 
-    /**
-     * 회원 정보 수정
-     */
+    /* 소셜로그인시 이미 등록된 회원이라면 수정날짜만 업데이트해줘서
+     * 기존 데이터를 보존하도록 예외처리 */
     public User updateModifiedDate() {
         this.onPreUpdate();
         return this;
     }
 
-    /**
-     * 소셜로그인시 이미 등록된 회원이라면 수정날짜만 업데이트해줘서
-     * 기존 데이터를 보존하도록 예외처리
-     */
     public String getRoleValue() {
         return this.role.getValue();
     }
