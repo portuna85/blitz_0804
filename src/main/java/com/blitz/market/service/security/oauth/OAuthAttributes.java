@@ -1,4 +1,4 @@
-package com.blitz.market.application.security.oauth;
+package com.blitz.market.service.security.oauth;
 
 import com.blitz.market.domain.Role;
 import com.blitz.market.domain.User;

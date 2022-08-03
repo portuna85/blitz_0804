@@ -1,6 +1,6 @@
-package com.blitz.market.application.security.auth;
+package com.blitz.market.service.security.auth;
 
-import com.blitz.market.application.dto.UserDto;
+import com.blitz.market.service.dto.UserDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;

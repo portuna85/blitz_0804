@@ -1,4 +1,4 @@
-package com.blitz.market.application.dto;
+package com.blitz.market.service.dto;
 
 import com.blitz.market.domain.Role;
 import com.blitz.market.domain.User;

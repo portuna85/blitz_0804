@@ -1,4 +1,4 @@
-package com.blitz.market.application.dto;
+package com.blitz.market.service.dto;
 
 import com.blitz.market.domain.Comment;
 import com.blitz.market.domain.Posts;

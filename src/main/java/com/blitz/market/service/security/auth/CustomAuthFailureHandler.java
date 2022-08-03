@@ -1,4 +1,4 @@
-package com.blitz.market.application.security.auth;
+package com.blitz.market.service.security.auth;
 
 import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
 import org.springframework.security.authentication.BadCredentialsException;

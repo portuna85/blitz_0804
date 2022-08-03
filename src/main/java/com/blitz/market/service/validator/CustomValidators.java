@@ -1,6 +1,6 @@
-package com.blitz.market.application.validator;
+package com.blitz.market.service.validator;
 
-import com.blitz.market.application.dto.UserDto;
+import com.blitz.market.service.dto.UserDto;
 import com.blitz.market.infrastructure.persistence.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

@@ -1,7 +1,7 @@
 package com.blitz.market.presentation;
 
-import com.blitz.market.application.UserService;
-import com.blitz.market.application.dto.UserDto;
+import com.blitz.market.service.UserService;
+import com.blitz.market.service.dto.UserDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

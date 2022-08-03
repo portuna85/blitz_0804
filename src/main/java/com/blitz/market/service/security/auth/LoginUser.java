@@ -1,4 +1,4 @@
-package com.blitz.market.application.security.auth;
+package com.blitz.market.service.security.auth;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

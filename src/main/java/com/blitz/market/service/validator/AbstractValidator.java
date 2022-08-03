@@ -1,4 +1,4 @@
-package com.blitz.market.application.validator;
+package com.blitz.market.service.validator;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.Errors;

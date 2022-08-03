@@ -1,10 +1,10 @@
 package com.blitz.market.presentation;
 
-import com.blitz.market.application.PostsService;
-import com.blitz.market.application.dto.CommentDto;
-import com.blitz.market.application.dto.PostsDto;
-import com.blitz.market.application.dto.UserDto;
-import com.blitz.market.application.security.auth.LoginUser;
+import com.blitz.market.service.PostsService;
+import com.blitz.market.service.dto.CommentDto;
+import com.blitz.market.service.dto.PostsDto;
+import com.blitz.market.service.dto.UserDto;
+import com.blitz.market.service.security.auth.LoginUser;
 import com.blitz.market.domain.Posts;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

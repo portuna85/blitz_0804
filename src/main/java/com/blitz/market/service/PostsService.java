@@ -1,6 +1,6 @@
-package com.blitz.market.application;
+package com.blitz.market.service;
 
-import com.blitz.market.application.dto.PostsDto;
+import com.blitz.market.service.dto.PostsDto;
 import com.blitz.market.domain.Posts;
 import com.blitz.market.domain.User;
 import com.blitz.market.infrastructure.persistence.PostsRepository;

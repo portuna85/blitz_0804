@@ -1,6 +1,6 @@
 package com.blitz.market.infrastructure.config;
 
-import com.blitz.market.application.security.auth.LoginUserArgumentResolver;
+import com.blitz.market.service.security.auth.LoginUserArgumentResolver;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;

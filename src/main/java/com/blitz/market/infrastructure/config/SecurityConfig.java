@@ -1,7 +1,7 @@
 package com.blitz.market.infrastructure.config;
 
-import com.blitz.market.application.security.auth.CustomUserDetailsService;
-import com.blitz.market.application.security.oauth.CustomOAuth2UserService;
+import com.blitz.market.service.security.auth.CustomUserDetailsService;
+import com.blitz.market.service.security.oauth.CustomOAuth2UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
