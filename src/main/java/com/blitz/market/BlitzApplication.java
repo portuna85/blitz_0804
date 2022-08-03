@@ -22,19 +22,5 @@ public class BlitzApplication extends SpringBootServletInitializer {
     public static void main(String[] args) {
         SpringApplication.run(BlitzApplication.class, args);
     }
-
-    @Bean
-    public Mustache.Compiler mustacheCompiler(Mustache.TemplateLoader mustacheTemplateLoader,
-                                              Environment environment) {
-
-        MustacheEnvironmentCollector collector = new MustacheEnvironmentCollector();
-        collector.setEnvironment(environment);
-
-        // default value
-        Mustache.Compiler compiler = Mustache.compiler().defaultValue("")
-                .withLoader(mustacheTemplateLoader)
-                .withCollector(collector);
-        return compiler;
-    }
 }
 
