@@ -70,14 +70,15 @@ public class UserController {
 
     @GetMapping("/auth/login")
     public String login(@RequestParam(value = "error", required = false)String error,
-                        @RequestParam(value = "exception", required = false)String exception,
-                        Model model) {
+                        @RequestParam(value = "exception", required = false)String exception, Model model) {
         model.addAttribute("error", error);
         model.addAttribute("exception", exception);
         return "user/user-login";
     }
 
-    /* Security에서 로그아웃은 기본적으로 POST지만, GET으로 우회 */
+    /**
+     *  Security에서 로그아웃은 기본적으로 POST지만, GET으로 우회
+     */
     @GetMapping("/logout")
     public String logout(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
