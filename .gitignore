@@ -8,6 +8,7 @@ build/
 application-oauth.properties
 application-real-db.properties
 application.properties
+scripts/deploy_v1.sh
 
 ### STS ###
 .apt_generated
