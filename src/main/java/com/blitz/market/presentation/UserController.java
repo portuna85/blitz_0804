@@ -32,7 +32,9 @@ public class UserController {
     private final CustomValidators.NicknameValidator NicknameValidator;
     private final CustomValidators.UsernameValidator UsernameValidator;
 
-    /** 커스텀 유효성 검증을 위해 추가 */
+    /**
+     * 커스텀 유효성 검증을 위해 추가
+     */
     @InitBinder
     public void validatorBinder(WebDataBinder binder) {
         binder.addValidators(EmailValidator);
